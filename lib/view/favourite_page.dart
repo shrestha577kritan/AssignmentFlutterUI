@@ -128,7 +128,7 @@ class _FavoutirePageState extends State<FavoutirePage> {
                         Text(
                           'S',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                              fontWeight: FontWeight.bold, fontSize: 15,color: Colors.grey),
                         ),
                       ),
                     ),
@@ -138,7 +138,7 @@ class _FavoutirePageState extends State<FavoutirePage> {
                         Text(
                           'M',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                              fontWeight: FontWeight.bold, fontSize: 15,color: Colors.grey),
                         ),
                       ),
                     ),
@@ -148,7 +148,7 @@ class _FavoutirePageState extends State<FavoutirePage> {
                         Text(
                           'L',
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 15),
+                              fontWeight: FontWeight.bold, fontSize: 15,color: Colors.grey),
                         ),
                       ),
                     ),
@@ -178,9 +178,9 @@ class _FavoutirePageState extends State<FavoutirePage> {
                   SizedBox(
                     width: 7.w,
                   ),
-                  Text('$add'),
+                  Text('$add',style: TextStyle(color: Colors.grey),),
                   SizedBox(
-                    width: 7.w,
+                    width: 10.w,
                   ),
                   FloatingActionButton.small(
                     backgroundColor: Colors.red,

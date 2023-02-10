@@ -1,32 +1,36 @@
-import 'dart:ui';
-
 import 'package:designassignment/utitlies/available.dart';
 import 'package:designassignment/utitlies/popular.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomePage extends StatefulWidget {
- 
-   
-
-
-
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
   final List available = [
-    ['Burger',  'assets/burger.png', ],
-    ['Cake', 'assets/cake.png', ],
-    ['Pizza', 'assets/pizza.png', ],
-      ['Ice Cream', 'assets/icecream.png', ],
+    [
+      'Burger',
+      'assets/burger.png',
+    ],
+    [
+      'Cake',
+      'assets/cake.png',
+    ],
+    [
+      'Pizza',
+      'assets/pizza.png',
+    ],
+    [
+      'Ice Cream',
+      'assets/icecream.png',
+    ],
   ];
   final List popular = [
-    ['Chipotle Cheesy Chicken','Chicken Burger', 'assets/burger.png', 100],
+    ['Chipotle Cheesy Chicken', 'Chicken Burger', 'assets/burger.png', 100],
     ['Cake', 'Velina Cake', 'assets/cake.png', 80],
-    ['Ice Cream','Cherry Ice Cream','assets/icecream.png', 96],
+    ['Ice Cream', 'Cherry Ice Cream', 'assets/icecream.png', 96],
   ];
   @override
   Widget build(BuildContext context) {
@@ -69,7 +73,9 @@ class _HomePageState extends State<HomePage> {
                       Text(
                         'Chicago IIL',
                         style: TextStyle(
-                            fontWeight: FontWeight.w900, fontSize: 15),
+                            fontWeight: FontWeight.w900,
+                            fontSize: 15,
+                            color: Colors.grey),
                       ),
                     ],
                   ),
@@ -104,12 +110,12 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 248, 242, 242),
+                        color: Color.fromARGB(255, 233, 228, 228),
                         border: Border.all(color: Colors.white),
                         borderRadius: BorderRadius.circular(5),
                         boxShadow: [
                           BoxShadow(
-                            color: Color.fromARGB(255, 221, 212, 212)
+                            color: Color.fromARGB(255, 214, 205, 205)
                                 .withOpacity(0.5),
                             spreadRadius: 5,
                             blurRadius: 5,
@@ -117,25 +123,13 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      child: Row(
-                        children: [
-                          Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10),
-                            child: Container(
-                                height: 35,
-                                child: Icon(Icons.search,
-                                    color: Colors.grey[600])),
-                          ),
-                          Expanded(
-                            child: TextField(
-                              decoration: InputDecoration(
-                                border: InputBorder.none,
-                                hintText: 'Search our Delicious Burger',
-                                labelStyle: TextStyle(color: Colors.grey),
-                              ),
-                            ),
-                          ),
-                        ],
+                      child: TextFormField(
+                        decoration: InputDecoration(
+                          prefixIcon: Icon(Icons.search),
+                          border: InputBorder.none,
+                          hintText: 'Search our Delicious Burger',
+                          labelStyle: TextStyle(color: Colors.black),
+                        ),
                       ),
                     ),
                   ),
@@ -171,7 +165,6 @@ class _HomePageState extends State<HomePage> {
                         child: PoularFood(
                           image: available[index][1],
                           name: available[index][0],
-
                         ),
                       ),
                     );

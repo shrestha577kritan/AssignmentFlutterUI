@@ -9,7 +9,7 @@ class SettingPage extends StatelessWidget {
     return SafeArea(
       child: Center(
         child: Scaffold(body: Container(
-          child: Text('setting page'),
+          child: Center(child: Text('setting page')),
     
         )),
       ),
